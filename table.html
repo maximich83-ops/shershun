@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Таблиця</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+/* Контейнер для прокрутки */
+div {
+    width: 100%;
+    height: 300px;
+    overflow: auto;
+}
+
+/* Таблиця */
+table {
+    border-collapse: collapse;
+    width: 800px;
+}
+
+/* Всі клітинки */
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Липкий заголовок */
+thead th {
+    position: sticky;
+    top: 0;
+    background: lightgray;
+    z-index: 2;
+}
+
+/* Липкий перший стовпець */
+tr th:first-child,
+tr td:first-child {
+    position: sticky;
+    left: 0;
+    background: lightblue;
+    z-index: 1;
+}
+
+/* Щоб верхній лівий кут був поверх */
+thead th:first-child {
+    z-index: 3;
+}
+</style>
+
+</head>
+<body>
+
+<div>
+<table>
+    <thead>
+        <tr>
+            <th>№</th>
+            <th>Понеділок</th>
+            <th>Вівторок</th>
+            <th>Середа</th>
+            <th>Четвер</th>
+            <th>Пʼятниця</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Математика</td>
+            <td>Фізика</td>
+            <td>Інформатика</td>
+            <td>Хімія</td>
+            <td>Англійська</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Історія</td>
+            <td>Біологія</td>
+            <td>Географія</td>
+            <td>Математика</td>
+            <td>Фізика</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Хімія</td>
+            <td>Математика</td>
+            <td>Фізика</td>
+            <td>Інформатика</td>
+            <td>Історія</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Географія</td>
+            <td>Англійська</td>
+            <td>Біологія</td>
+            <td>Фізика</td>
+            <td>Математика</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Інформатика</td>
+            <td>Хімія</td>
+            <td>Історія</td>
+            <td>Географія</td>
+            <td>Біологія</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+</body>
+</html>
