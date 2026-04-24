@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Дашборд клініки</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 70px 1fr auto;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "sidebar footer";
+    height: 100vh;
+}
+
+
+header {
+    grid-area: header;
+    background: #2c3e50;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header button {
+    padding: 8px 15px;
+    border: none;
+    background: #3498db;
+    color: white;
+    cursor: pointer;
+}
+
+
+aside {
+    grid-area: sidebar;
+    background: #34495e;
+    color: white;
+    padding: 20px;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside li {
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+
+main {
+    grid-area: main;
+    padding: 20px;
+    background: #ecf0f1;
+}
+
+
+.cards {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: #f1f1f1;
+}
+
+
+.card.big {
+    grid-column: span 2;
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Клініка Dashboard</h1>
+    <button>Додати пацієнта</button>
+</header>
+
+<aside>
+    <ul>
+        <li>Головна</li>
+        <li>Пацієнти</li>
+        <li>Лікарі</li>
+        <li>Записи</li>
+        <li>Налаштування</li>
+    </ul>
+</aside>
+
+<main>
+    <h2>Загальна інформація</h2>
+    <p>Тут відображається основна статистика клініки.</p>
+
+    <div class="cards">
+        <div class="card big">
+            <h3>Загальна кількість пацієнтів</h3>
+            <p>1200+</p>
+        </div>
+
+        <div class="card">
+            <h3>Лікарі</h3>
+            <p>25</p>
+        </div>
+
+        <div class="card">
+            <h3>Записи сьогодні</h3>
+            <p>80</p>
+        </div>
+
+        <div class="card">
+            <h3>Вільні місця</h3>
+            <p>15</p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    © 2026 Клініка. Всі права захищені.
+</footer>
+
+</body>
+</html>
