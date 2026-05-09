@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма кредитної картки</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background: #f2f2f2;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-form{
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 400px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+
+        .card-form h2{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-group{
+            margin-bottom: 15px;
+        }
+
+        .input-group label{
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .input-group input{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .row{
+            display: flex;
+            gap: 10px;
+        }
+
+        .row .input-group{
+            flex: 1;
+        }
+
+        button{
+            width: 100%;
+            padding: 12px;
+            background: #2b7cff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background: #1d5fd1;
+        }
+    </style>
+</head>
+<body>
+
+    <form class="card-form">
+        <h2>Оплата карткою</h2>
+
+        <div class="input-group">
+            <label>Номер картки</label>
+            <input type="text" placeholder="1234 5678 9012 3456">
+        </div>
+
+        <div class="input-group">
+            <label>Ім'я власника</label>
+            <input type="text" placeholder="IVAN IVANOV">
+        </div>
+
+        <div class="row">
+            <div class="input-group">
+                <label>Термін дії</label>
+                <input type="text" placeholder="MM/YY">
+            </div>
+
+            <div class="input-group">
+                <label>CVV</label>
+                <input type="password" placeholder="123">
+            </div>
+        </div>
+
+        <button type="submit">Оплатити</button>
+    </form>
+
+</body>
+</html>

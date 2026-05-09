@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Міні бібліотека стилів</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            padding: 40px;
+            background: #f5f5f5;
+        }
+
+        h2{
+            margin: 25px 0 15px;
+        }
+
+        /* =====================
+           INPUT
+        ===================== */
+
+        .input-default,
+        .input-success,
+        .input-error,
+        .textarea{
+            width: 300px;
+            padding: 12px;
+            border-radius: 8px;
+            outline: none;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            transition: 0.3s;
+        }
+
+        /* Звичайний input */
+        .input-default{
+            border-color: #bdbdbd;
+        }
+
+        /* Коректний input */
+        .input-success{
+            border-color: #28a745;
+            background: #f0fff4;
+        }
+
+        /* Некоректний input */
+        .input-error{
+            border-color: #dc3545;
+            background: #fff0f0;
+        }
+
+
+        /* =====================
+           CHECKBOX
+        ===================== */
+
+        .checkbox{
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: green;
+            margin-right: 15px;
+        }
+
+
+        /* =====================
+           RADIO BUTTON
+        ===================== */
+
+        .radio{
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: blue;
+            margin-right: 15px;
+        }
+
+
+        /* =====================
+           BUTTONS
+        ===================== */
+
+        .btn-green,
+        .btn-red,
+        .btn-disabled{
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-right: 10px;
+        }
+
+        /* Зелена кнопка */
+        .btn-green{
+            background: #28a745;
+        }
+
+        .btn-green:hover{
+            background: #1d7d34;
+        }
+
+        /* Червона кнопка */
+        .btn-red{
+            background: #dc3545;
+        }
+
+        .btn-red:hover{
+            background: #b52a37;
+        }
+
+        /* Неактивна кнопка */
+        .btn-disabled{
+            background: gray;
+            cursor: not-allowed;
+        }
+
+
+        /* =====================
+           ROUND BUTTONS
+        ===================== */
+
+        .round-green,
+        .round-red{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            color: white;
+            font-size: 22px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-right: 10px;
+        }
+
+        .round-green{
+            background: #28a745;
+        }
+
+        .round-green:hover{
+            background: #1d7d34;
+        }
+
+        .round-red{
+            background: #dc3545;
+        }
+
+        .round-red:hover{
+            background: #b52a37;
+        }
+
+
+        /* =====================
+           TEXTAREA
+        ===================== */
+
+        .textarea{
+            min-height: 120px;
+            resize: vertical;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Input</h2>
+
+    <input type="text" class="input-default" placeholder="Default input">
+    <br><br>
+
+    <input type="text" class="input-success" placeholder="Correct input">
+    <br><br>
+
+    <input type="text" class="input-error" placeholder="Error input">
+
+
+    <h2>Checkbox</h2>
+
+    <input type="checkbox" class="checkbox">
+    <input type="checkbox" class="checkbox" checked>
+
+
+    <h2>Radio Button</h2>
+
+    <input type="radio" class="radio" name="radio">
+    <input type="radio" class="radio" name="radio" checked>
+
+
+    <h2>Buttons</h2>
+
+    <button class="btn-green">Save</button>
+
+    <button class="btn-red">Delete</button>
+
+    <button class="btn-disabled" disabled>
+        Disabled
+    </button>
+
+
+    <h2>Round Buttons</h2>
+
+    <button class="round-green">✓</button>
+
+    <button class="round-red">✕</button>
+
+
+    <h2>Textarea</h2>
+
+    <textarea class="textarea" placeholder="Введіть текст..."></textarea>
+
+</body>
+</html>
